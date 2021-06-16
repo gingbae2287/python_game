@@ -1,0 +1,11 @@
+https://nightshadow.tistory.com/entry/pygame-%EC%9D%98-%EC%8A%A4%ED%94%84%EB%9D%BC%EC%9D%B4%ED%8A%B8-%EC%B6%A9%EB%8F%8C%EC%B2%B4%ED%81%AC-%EB%B0%A9%EB%B2%95
+이미지 충돌 체크 (이미지 모양 그대로를 체크)
+==> mask 체크
+
+  b1.mask = pygame.mask.from_surface(b1.image)
+    b2.mask = pygame.mask.from_surface(b2.image)
+    if(pygame.sprite.collide_mask(b1,b2)):
+	    print("Hit!")
+
+
+pygame.sprite.collide_mask(self, object)  # 투명부분 제외하고 충돌확인
